@@ -1,217 +1,311 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 .booking-section {
-  width: 100%;
-  min-height: 700px;
-  position: relative;
+    width: 100%;
+    min-height: 700px;
+    position: relative;
 
-  background-size: cover;
-  background-position: center 100%;
+    background-size: cover;
+    background-position: center 100%;
+    background-repeat: no-repeat;
 
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 
 /* Dark overlay */
 
 .booking-overlay {
-  position: absolute;
-  inset: 0;
+    position: absolute;
+    inset: 0;
 
-  background: rgba(0, 0, 0, 0.62);
+    background: rgba(0, 0, 0, 0.62);
 }
 
 /* Main container */
 
 .booking-container {
-  width: 100%;
-  max-width: 850px;
+    width: 100%;
+    max-width: 850px;
 
-  margin: 0 auto;
+    margin: 0 auto;
 
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
 
-  gap: 55px;
+    gap: 55px;
 
-  align-items: center;
+    align-items: center;
 
-  padding: 60px 30px;
+    padding: 60px 30px;
 }
 
 /* =========================
-   LEFT CONTENT
+LEFT CONTENT
 ========================= */
 
 .booking-content {
-  color: #fff;
+    color: #fff;
 }
 
 .booking-content h1 {
-  color: #d4a420;
+    color: #d4a420;
 
-  font-family: "Old English Text MT", Georgia, serif;
+    font-family: "Old English Text MT", Georgia, serif;
 
-  font-size: 42px;
-  font-weight: normal;
+    font-size: 42px;
+    font-weight: normal;
 
-  line-height: 1.15;
+    line-height: 1.15;
 
-  margin-bottom: 28px;
+    margin-bottom: 28px;
 }
 
 .booking-content p {
-  max-width: 470px;
+    max-width: 470px;
 
-  color: #e0ddd3;
+    color: #e0ddd3;
 
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-  font-size: 14px;
+    font-size: 14px;
 
-  line-height: 1.8;
+    line-height: 1.8;
 }
 
 /* =========================
-   FORM
+FORM
 ========================= */
 
 .booking-form {
-  background: rgba(5, 5, 5, 0.92);
+    background: rgba(5, 5, 5, 0.92);
 
-  padding: 38px 34px;
+    padding: 38px 34px;
 
-  border-radius: 7px;
+    border-radius: 7px;
 
-  width: 100%;
+    width: 100%;
 }
 
 .booking-form input {
-  width: 100%;
+    width: 100%;
 
-  height: 42px;
+    height: 42px;
 
-  margin-bottom: 15px;
+    margin-bottom: 15px;
 
-  padding: 0 14px;
+    padding: 0 14px;
 
-  background: #193a25;
+    background: #193a25;
 
-  border: 1px solid #315a35;
+    border: 1px solid #315a35;
 
-  color: #eee;
+    color: #eee;
 
-  outline: none;
+    outline: none;
 
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-  font-size: 12px;
+    font-size: 12px;
 }
 
 .booking-form input::placeholder {
-  color: #899589;
+    color: #899589;
 }
 
 .booking-form input:focus {
-  border-color: #d4a420;
+    border-color: #d4a420;
 }
 
 /* Date input */
 
 .booking-form input[type="datetime-local"] {
-  color: #899589;
+    color: #899589;
 }
 
 /* =========================
-   BUTTON
+BUTTON
 ========================= */
 
 .booking-form button {
-  width: 100%;
+    width: 100%;
 
-  height: 43px;
+    height: 43px;
 
-  margin-top: 5px;
+    margin-top: 5px;
 
-  border: none;
+    border: none;
 
-  background: #d4a420;
+    background: #d4a420;
 
-  color: #111;
+    color: #111;
 
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-  font-size: 12px;
+    font-size: 12px;
 
-  letter-spacing: 1px;
+    letter-spacing: 1px;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  transition: 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .booking-form button:hover {
-  background: #e5b52d;
+    background: #e5b52d;
 
-  transform: translateY(-2px);
+    transform: translateY(-2px);
 }
 
+
 /* =========================
-   TABLET
+TABLET
 ========================= */
 
 @media (max-width: 850px) {
 
-  .booking-section {
-    min-height: auto;
-  }
+    .booking-section {
+        min-height: auto;
 
-  .booking-container {
-    max-width: 700px;
+        padding-top: 90px;
+        padding-bottom: 40px;
 
-    grid-template-columns: 1fr;
+        background-position: center center;
+    }
 
-    gap: 35px;
+    .booking-container {
+        max-width: 700px;
 
-    padding: 70px 30px;
-  }
+        grid-template-columns: 1fr;
 
-  .booking-content {
-    text-align: center;
-  }
+        gap: 35px;
 
-  .booking-content p {
-    margin: 0 auto;
-  }
+        padding: 70px 30px;
+    }
 
+    .booking-content {
+        text-align: center;
+    }
+
+    .booking-content p {
+        margin: 0 auto;
+    }
+
+    .booking-form {
+        max-width: 500px;
+
+        margin: 0 auto;
+    }
 }
 
+
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 @media (max-width: 550px) {
 
-  .booking-container {
-    padding: 50px 20px;
-  }
+    .booking-section {
+        min-height: auto;
 
-  .booking-content h1 {
-    font-size: 32px;
-  }
+        padding-top: 90px;
+        padding-bottom: 30px;
 
-  .booking-content p {
-    font-size: 13px;
-  }
+        background-position: center center;
+    }
 
-  .booking-form {
-    padding: 28px 22px;
-  }
+    .booking-container {
+        width: 100%;
 
+        padding: 50px 20px;
+
+        gap: 30px;
+    }
+
+    .booking-content {
+        width: 100%;
+    }
+
+    .booking-content h1 {
+        font-size: 32px;
+
+        line-height: 1.25;
+
+        margin-bottom: 18px;
+    }
+
+    .booking-content p {
+        width: 100%;
+
+        font-size: 13px;
+
+        line-height: 1.7;
+    }
+
+    .booking-form {
+        width: 100%;
+
+        padding: 28px 22px;
+
+        border-radius: 6px;
+    }
+
+    .booking-form input {
+        width: 100%;
+
+        height: 44px;
+
+        margin-bottom: 13px;
+
+        font-size: 13px;
+    }
+
+    .booking-form button {
+        width: 100%;
+
+        height: 44px;
+
+        font-size: 12px;
+    }
+}
+
+
+/* =========================
+SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .booking-container {
+        padding: 40px 15px;
+    }
+
+    .booking-content h1 {
+        font-size: 27px;
+    }
+
+    .booking-content p {
+        font-size: 12px;
+    }
+
+    .booking-form {
+        padding: 24px 16px;
+    }
+
+    .booking-form input {
+        height: 42px;
+
+        font-size: 12px;
+    }
+
+    .booking-form button {
+        height: 42px;
+    }
 }

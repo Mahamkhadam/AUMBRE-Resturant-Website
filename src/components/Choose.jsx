@@ -1,67 +1,114 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Choose.css";
+
 import taste from "../assets/Taste.png";
 import chefs from "../assets/Chef.png";
 import delivery from "../assets/Delivery.png";
 import discount from "../assets/Discount.png";
+
 const Choose = () => {
+
+  const [activeCard, setActiveCard] = useState(null);
+
   const features = [
     {
       id: 1,
-      img:taste,
+      img: taste,
       title: "TASTE MATTERS",
-      description: "Use this space to promote the business, its dishes or its services.",
+      description:
+        "Use this space to promote the business, its dishes or its services.",
     },
     {
       id: 2,
-      img:chefs,
+      img: chefs,
       title: "THE BEST CHEFS",
-      description: "Use this space to promote the business, its dishes or its services.",
+      description:
+        "Use this space to promote the business, its dishes or its services.",
     },
     {
       id: 3,
-      img:discount,
+      img: discount,
       title: "DISCOUNTS",
-      description: "Use this space to promote the business, its dishes or its services.",
+      description:
+        "Use this space to promote the business, its dishes or its services.",
     },
     {
       id: 4,
-      img:delivery,
+      img: delivery,
       title: "EXPRESS DELIVERY",
-      description: "Use this space to promote the business, its dishes or its services.",
+      description:
+        "Use this space to promote the business, its dishes or its services.",
     },
   ];
 
+  // Card click function
+  const handleCardClick = (id) => {
+    setActiveCard(id);
+  };
+
   return (
     <section className="choose-container">
+
       <div className="choose-overlay"></div>
+
       <div className="choose-wrapper">
+
+        {/* Header */}
         <div className="choose-header">
-          <h2 className="choose-title">Why People Choose Us?</h2>
+
+          <h2 className="choose-title">
+            Why People Choose Us?
+          </h2>
+
           <p className="choose-subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corrupti quod omnis 
-            fugiat deleniti ipsam soluta, illo necessitatibus officia et natus voluptatum 
-            assumenda repellendus nobis dolores delectus totam dignissimos tempora enim.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+            Corrupti quod omnis fugiat deleniti ipsam soluta, illo
+            necessitatibus officia et natus voluptatum assumenda
+            repellendus nobis dolores delectus totam dignissimos
+            tempora enim.
           </p>
+
         </div>
 
         {/* Features Grid */}
         <div className="choose-grid">
+
           {features.map((feature) => (
-            <div className="choose-card" key={feature.id}>
-             <div className="choose-img">
-            <img
-            src={feature.img}
-            alt={feature.title}
-            className="choose-icon"
-           />
+
+            <div
+              className={`choose-card ${
+                activeCard === feature.id ? "active" : ""
+              }`}
+              key={feature.id}
+              onClick={() => handleCardClick(feature.id)}
+            >
+
+              <div className="choose-img">
+
+                <img
+                  src={feature.img}
+                  alt={feature.title}
+                  className="choose-icon"
+                />
+
+              </div>
+
+              <h3 className="choose-feature-title">
+                {feature.title}
+              </h3>
+
+              <p className="choose-feature-desc">
+                {feature.description}
+              </p>
+
             </div>
-              <h3 className="choose-feature-title">{feature.title}</h3>
-              <p className="choose-feature-desc">{feature.description}</p>
-            </div>
+
           ))}
+
         </div>
+
       </div>
+
     </section>
   );
 };

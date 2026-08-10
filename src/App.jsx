@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 
 import { Routes, Route } from "react-router-dom";
@@ -15,9 +16,24 @@ import Reserve from "./pages/Reserve";
 import Footer from "./components/Footer";
 
 function App() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
-      <Navbar />
+      <Navbar isMobile={isMobile} />
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

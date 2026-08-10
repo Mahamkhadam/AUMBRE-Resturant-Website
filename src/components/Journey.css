@@ -1,132 +1,263 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .journey-section {
-  width: 100%;
-  background: #0d2818;
-  padding: 90px 70px;
+    width: 100%;
+    background: #0d2818;
+    padding: 90px 70px;
 }
 
-/* Heading */
+/* =========================
+   HEADING
+========================= */
 
 .journey-content {
-  text-align: center;
-  margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 
 .journey-content h1 {
-  color: #d4a420;
-  font-family: "Old English Text MT", Georgia, serif;
-  font-size: 55px;
-  font-weight: normal;
+    color: #d4a420;
+
+    font-family: "Old English Text MT", Georgia, serif;
+
+    font-size: 55px;
+    font-weight: normal;
+
+    line-height: 1.2;
 }
 
-/* Journey Box */
+
+/* =========================
+   JOURNEY BOX
+========================= */
 
 .journey-box {
-  max-width: 1200px;
-  margin: 0 auto;
+    max-width: 1200px;
+    margin: 0 auto;
 
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 25px;
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
 }
 
-/* Individual Item */
+
+/* =========================
+   INDIVIDUAL ITEM
+========================= */
 
 .stat {
-  min-height: 220px;
+    min-height: 220px;
 
-  background: #1d3b25;
-  border: 1px solid #816726;
+    background: #1d3b25;
 
-  padding: 35px 25px;
+    border: 1px solid #816726;
 
-  text-align: center;
+    padding: 35px 25px;
 
-  transition: 0.4s ease;
+    text-align: center;
+
+    transition: 0.4s ease;
 }
 
 .stat:hover {
-  transform: translateY(-8px);
-  border-color: #d4a420;
+    transform: translateY(-8px);
+
+    border-color: #d4a420;
 }
 
-/* Year */
+
+/* =========================
+   YEAR
+========================= */
 
 .stat h2 {
-  color: #d4a420;
+    color: #d4a420;
 
-  font-family: "Old English Text MT", Georgia, serif;
+    font-family: "Old English Text MT", Georgia, serif;
 
-  font-size: 45px;
-  font-weight: normal;
+    font-size: 45px;
+    font-weight: normal;
 
-  margin-bottom: 25px;
+    margin-bottom: 25px;
 }
 
-/* Description */
+
+/* =========================
+   DESCRIPTION
+========================= */
 
 .stat p {
-  color: #aaa99c;
+    color: #aaa99c;
 
-  font-family: Georgia, serif;
+    font-family: Georgia, serif;
 
-  font-size: 16px;
-  line-height: 1.8;
+    font-size: 16px;
+
+    line-height: 1.8;
 }
 
-/* Tablet */
+
+/* =========================
+   TABLET
+========================= */
 
 @media (max-width: 1000px) {
 
-  .journey-section {
-    padding: 70px 40px;
-  }
+    .journey-section {
+        padding: 70px 40px;
+    }
 
-  .journey-box {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-  }
+    .journey-box {
+        grid-template-columns: repeat(2, 1fr);
 
-  .journey-content h1 {
-    font-size: 48px;
-  }
+        gap: 25px;
+    }
+
+    .journey-content {
+        margin-bottom: 45px;
+    }
+
+    .journey-content h1 {
+        font-size: 48px;
+    }
+
+    .stat {
+        min-height: 210px;
+
+        padding: 30px 20px;
+    }
+
+    .stat h2 {
+        font-size: 42px;
+    }
 }
 
-/* Mobile */
+
+/* =========================
+   MOBILE
+========================= */
 
 @media (max-width: 600px) {
 
-  .journey-section {
-    padding: 60px 20px;
-  }
+    .journey-section {
+        width: 100%;
 
-  .journey-content {
-    margin-bottom: 40px;
-  }
+        padding: 60px 20px;
+    }
 
-  .journey-content h1 {
-    font-size: 38px;
-  }
+    .journey-content {
+        width: 100%;
 
-  .journey-box {
-    grid-template-columns: 1fr;
-  }
+        margin-bottom: 35px;
 
-  .stat {
-    min-height: auto;
-    padding: 30px 20px;
-  }
+        text-align: center;
+    }
 
-  .stat h2 {
-    font-size: 40px;
-  }
+    .journey-content h1 {
+        font-size: 36px;
 
-  .stat p {
-    font-size: 15px;
-  }
+        line-height: 1.2;
+    }
+
+    .journey-box {
+        width: 100%;
+
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+    }
+
+    .stat {
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 28px 20px;
+    }
+
+    .stat h2 {
+        font-size: 38px;
+
+        margin-bottom: 15px;
+    }
+
+    .stat p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 400px) {
+
+    .journey-section {
+        padding: 50px 15px;
+    }
+
+    .journey-content {
+        margin-bottom: 30px;
+    }
+
+    .journey-content h1 {
+        font-size: 31px;
+    }
+
+    .journey-box {
+        gap: 15px;
+    }
+
+    .stat {
+        padding: 24px 15px;
+    }
+
+    .stat h2 {
+        font-size: 34px;
+
+        margin-bottom: 12px;
+    }
+
+    .stat p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+}
+
+
+/* =========================
+   VERY SMALL MOBILE
+========================= */
+
+@media (max-width: 360px) {
+
+    .journey-section {
+        padding: 40px 12px;
+    }
+
+    .journey-content h1 {
+        font-size: 28px;
+    }
+
+    .stat {
+        padding: 22px 13px;
+    }
+
+    .stat h2 {
+        font-size: 31px;
+    }
+
+    .stat p {
+        font-size: 12px;
+    }
 }

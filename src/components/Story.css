@@ -1,40 +1,173 @@
-.story{
-     width:100%;
-    min-height:100vh;
-    background:#0d2318;
+.story {
+    width: 100%;
+    min-height: 100vh;
+    background: #0d2318;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    gap:80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
 
-    padding:100px 120px;
+    padding: 100px 120px;
 }
-.story-img img{
-    width:650px;
-    height:500px;
-    object-fit:cover;
+
+.story-img img {
+    width: 650px;
+    height: 500px;
+    object-fit: cover;
 }
-.story-content{
-     max-width:500px;
+
+.story-content {
+    max-width: 500px;
 }
-.story-content h2{
-    color:#d4a420;
-    font-size:70px;
-    margin-bottom:40px;
+
+.story-content h2 {
+    color: #d4a420;
+    font-size: 70px;
+    margin-bottom: 40px;
 }
-.story-content p{
-     color:#9b9b9b;
-    font-size:24px;
-    line-height:1.8;
-    margin-bottom:35px;
+
+.story-content p {
+    color: #9b9b9b;
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 35px;
 }
-.story-content a{
-     color:#d4a420;
-    font-size:24px;
-    line-height:1.8;
-    margin-bottom:35px;
+
+.story-content a {
+    color: #d4a420;
+    font-size: 24px;
+    line-height: 1.8;
+    margin-bottom: 35px;
+    text-decoration: none;
 }
-.story-content a:hover{
+
+.story-content a:hover {
     color: white;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .story {
+        gap: 40px;
+        padding: 80px 50px;
+    }
+
+    .story-img img {
+        width: 500px;
+        height: 400px;
+    }
+
+    .story-content {
+        max-width: 450px;
+    }
+
+    .story-content h2 {
+        font-size: 55px;
+        margin-bottom: 25px;
+    }
+
+    .story-content p {
+        font-size: 18px;
+        line-height: 1.7;
+        margin-bottom: 25px;
+    }
+
+    .story-content a {
+        font-size: 18px;
+    }
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .story {
+        min-height: auto;
+
+        flex-direction: column;
+
+        gap: 40px;
+
+        padding: 80px 25px 60px;
+
+        text-align: center;
+    }
+
+    .story-img {
+        width: 100%;
+    }
+
+    .story-img img {
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+        max-height: 400px;
+
+        object-fit: cover;
+    }
+
+    .story-content {
+        width: 100%;
+        max-width: 600px;
+    }
+
+    .story-content h2 {
+        font-size: 45px;
+        margin-bottom: 20px;
+    }
+
+    .story-content p {
+        font-size: 16px;
+        line-height: 1.7;
+        margin-bottom: 20px;
+    }
+
+    .story-content a {
+        display: inline-block;
+
+        font-size: 17px;
+        margin-top: 5px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .story {
+        padding: 70px 18px 50px;
+        gap: 30px;
+    }
+
+    .story-img img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .story-content h2 {
+        font-size: 36px;
+        margin-bottom: 18px;
+    }
+
+    .story-content p {
+        font-size: 14px;
+        line-height: 1.7;
+        margin-bottom: 18px;
+    }
+
+    .story-content a {
+        font-size: 15px;
+    }
 }
