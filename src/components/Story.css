@@ -144,26 +144,19 @@ body,
 
   /* IMAGE */
 
-  .story-img {
-    width: 100% !important;
-    max-width: 100% !important;
-
-    flex: none;
-
+   .story-img {
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
-  .story-img img {
-    width: 100% !important;
-    max-width: 100% !important;
+    .story-img img {
+    width: 230px;
+    height: auto;
+    max-width: 85%;
 
-    height: 240px;
-
-    object-fit: cover;
-    object-position: center;
-
+    object-fit: contain;
     display: block;
   }
 
