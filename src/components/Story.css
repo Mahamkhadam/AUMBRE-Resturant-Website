@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+/* =========================
+   STORY
+========================= */
+
 .story {
     width: 100%;
     min-height: 100vh;
@@ -65,7 +69,6 @@
     color: white;
 }
 
-
 /* =========================
    TABLET
 ========================= */
@@ -78,8 +81,8 @@
     }
 
     .story-img img {
-        width: 480px;
-        height: 380px;
+        width: 450px;
+        height: 360px;
     }
 
     .story-content {
@@ -97,7 +100,6 @@
     }
 }
 
-
 /* =========================
    MOBILE
 ========================= */
@@ -105,6 +107,7 @@
 @media (max-width: 768px) {
 
     .story {
+        width: 100%;
         min-height: auto;
 
         display: flex;
@@ -123,14 +126,16 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        align-items: center;
     }
 
     .story-img img {
-        width: 100%;
-        max-width: 300px;
-        height: 190px;
+        width: 260px;
+        max-width: 90%;
+        height: 170px;
 
         object-fit: cover;
+        display: block;
     }
 
     /* CONTENT */
@@ -156,7 +161,6 @@
     }
 }
 
-
 /* =========================
    SMALL MOBILE
 ========================= */
@@ -164,6 +168,7 @@
 @media (max-width: 480px) {
 
     .story {
+        width: 100%;
         padding: 45px 12px 40px;
         gap: 20px;
     }
@@ -173,12 +178,13 @@
     }
 
     .story-img img {
-        width: 90%;
-        max-width: 260px;
-        height: 165px;
+        width: 230px;
+        max-width: 90%;
+        height: 150px;
     }
 
     .story-content {
+        width: 100%;
         max-width: 330px;
     }
 
@@ -198,7 +204,6 @@
     }
 }
 
-
 /* =========================
    VERY SMALL MOBILE
 ========================= */
@@ -206,17 +211,19 @@
 @media (max-width: 360px) {
 
     .story {
+        width: 100%;
         padding: 40px 10px 35px;
         gap: 18px;
     }
 
     .story-img img {
-        width: 88%;
-        max-width: 240px;
-        height: 150px;
+        width: 210px;
+        max-width: 88%;
+        height: 140px;
     }
 
     .story-content {
+        width: 100%;
         max-width: 300px;
     }
 
