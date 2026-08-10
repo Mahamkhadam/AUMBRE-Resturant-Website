@@ -1,5 +1,5 @@
 /* =========================
-   GLOBAL
+GLOBAL
 ========================= */
 
 * {
@@ -10,6 +10,8 @@
 
 .choose-container {
   width: 100%;
+  max-width: 100%;
+  min-width: 0;
   min-height: 100vh;
 
   padding: 90px 30px;
@@ -28,23 +30,28 @@
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
+
+  overflow: hidden;
 }
 
 /* =========================
-   OVERLAY
+OVERLAY
 ========================= */
 
 .choose-overlay {
   position: absolute;
   inset: 0;
 
-  background: rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0, 0, 0, 0.3);
 
   z-index: 1;
 }
 
 /* =========================
-   WRAPPER
+WRAPPER
 ========================= */
 
 .choose-wrapper {
@@ -58,7 +65,7 @@
 }
 
 /* =========================
-   HEADER
+HEADER
 ========================= */
 
 .choose-header {
@@ -103,15 +110,16 @@
 }
 
 /* =========================
-   GRID
+GRID
 ========================= */
 
 .choose-grid {
   width: 100%;
+  max-width: 100%;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 
   gap: 30px;
 
@@ -119,11 +127,12 @@
 }
 
 /* =========================
-   CARD
+CARD
 ========================= */
 
 .choose-card {
   width: 100%;
+  min-width: 0;
 
   text-align: center;
 
@@ -137,13 +146,14 @@
 }
 
 /* =========================
-   IMAGE / ICON
+IMAGE / ICON
 ========================= */
 
 .choose-img {
   width: 100%;
 
   display: flex;
+
   justify-content: center;
   align-items: center;
 
@@ -164,7 +174,7 @@
 }
 
 /* =========================
-   FEATURE CONTENT
+FEATURE CONTENT
 ========================= */
 
 .choose-feature-title {
@@ -194,17 +204,23 @@
 }
 
 /* =========================
-   TABLET
+TABLET
 ========================= */
 
 @media (max-width: 992px) {
 
   .choose-container {
+    width: 100%;
     min-height: auto;
 
-    padding: 75px 35px;
+    padding: 75px 30px;
 
     background-attachment: scroll;
+  }
+
+  .choose-wrapper {
+    width: 100%;
+    max-width: 100%;
   }
 
   .choose-title {
@@ -218,7 +234,7 @@
   }
 
   .choose-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
     gap: 35px;
 
@@ -239,16 +255,19 @@
 }
 
 /* =========================
-   MOBILE
+MOBILE
 ========================= */
 
 @media (max-width: 768px) {
 
   .choose-container {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+
     min-height: auto;
 
-    padding: 60px 18px;
+    padding: 60px 15px;
 
     display: block;
 
@@ -257,13 +276,25 @@
     background-attachment: scroll;
   }
 
-  .choose-wrapper {
+  .choose-overlay {
     width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.38);
   }
 
-  /* Header */
+  .choose-wrapper {
+    width: 100% !important;
+    max-width: 100% !important;
+
+    margin: 0;
+  }
+
+  /* HEADER */
 
   .choose-header {
+    width: 100%;
+
     margin-bottom: 30px;
   }
 
@@ -282,6 +313,8 @@
   .choose-subtitle {
     width: 100%;
 
+    max-width: 100%;
+
     font-size: 13px;
 
     line-height: 1.7;
@@ -289,10 +322,11 @@
     padding: 0 5px;
   }
 
-  /* Grid */
+  /* GRID */
 
   .choose-grid {
-    width: 100%;
+    width: 100% !important;
+    max-width: 100%;
 
     grid-template-columns: 1fr;
 
@@ -301,17 +335,19 @@
     margin-top: 30px;
   }
 
-  /* Card */
+  /* CARD */
 
   .choose-card {
-    width: 100%;
+    width: 100% !important;
 
     padding: 15px 10px;
   }
 
-  /* Icon */
+  /* ICON */
 
   .choose-img {
+    width: 100%;
+
     margin-bottom: 15px;
   }
 
@@ -320,7 +356,7 @@
     height: 65px;
   }
 
-  /* Title */
+  /* TITLE */
 
   .choose-feature-title {
     font-size: 27px;
@@ -330,10 +366,11 @@
     margin: 12px 0 8px;
   }
 
-  /* Description */
+  /* DESCRIPTION */
 
   .choose-feature-desc {
     width: 100%;
+
     max-width: 300px;
 
     font-size: 14px;
@@ -343,16 +380,20 @@
 }
 
 /* =========================
-   SMALL MOBILE
+SMALL MOBILE
 ========================= */
 
 @media (max-width: 480px) {
 
   .choose-container {
-    padding: 50px 14px;
+    width: 100% !important;
+
+    padding: 50px 12px;
   }
 
   .choose-header {
+    width: 100%;
+
     margin-bottom: 25px;
   }
 
@@ -365,6 +406,8 @@
   }
 
   .choose-subtitle {
+    width: 100%;
+
     font-size: 12.5px;
 
     line-height: 1.6;
@@ -373,12 +416,16 @@
   }
 
   .choose-grid {
+    width: 100%;
+
     gap: 25px;
 
     margin-top: 25px;
   }
 
   .choose-card {
+    width: 100%;
+
     padding: 10px 8px;
   }
 
@@ -407,12 +454,14 @@
 }
 
 /* =========================
-   VERY SMALL MOBILE
+VERY SMALL MOBILE
 ========================= */
 
 @media (max-width: 360px) {
 
   .choose-container {
+    width: 100% !important;
+
     padding: 42px 10px;
   }
 

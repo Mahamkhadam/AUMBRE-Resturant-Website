@@ -1,7 +1,3 @@
-/* =========================
-   GLOBAL
-========================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +7,17 @@
 body {
   margin: 0;
   padding: 0;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
 /* =========================
@@ -316,120 +323,62 @@ body {
 @media (max-width: 768px) {
 
   .popular {
-    width: 100%;
+    width: 100% ;
+    max-width: 100% ;
+    min-width: 0 ;
     min-height: auto;
 
     display: flex;
     flex-direction: column;
 
-    padding: 50px 18px;
+    padding: 50px 15px;
 
     gap: 35px;
 
-    overflow: hidden;
+    overflow-x: hidden;
   }
-
-  /* LEFT */
 
   .left {
-    width: 100%;
-
+    width: 100% ;
+    max-width: 100% ;
+    min-width: 0;
     text-align: center;
   }
-
-  .small-title {
-    font-size: 11px;
-
-    letter-spacing: 2px;
-
-    margin-bottom: 9px;
-  }
-
-  .left h2 {
-    font-size: 32px;
-
-    line-height: 1.25;
-
-    margin-bottom: 22px;
-  }
-
-  /* BUTTONS */
-
-  .left button {
-    width: 100%;
-
-    padding: 13px 10px;
-
-    margin-bottom: 9px;
-
-    font-size: 15px;
-  }
-
-  /* RIGHT */
 
   .right {
-    width: 100%;
+    width: 100% ;
+    max-width: 100% ;
+    min-width: 0;
   }
-
-  .right h1 {
-    width: 100%;
-
-    font-size: 34px;
-
-    line-height: 1.25;
-
-    text-align: center;
-
-    margin-bottom: 25px;
-  }
-
-  /* CARDS */
 
   .cards {
-    width: 100%;
-
+    width: 100% ;
+    max-width: 100% ;
+    
+    display: grid;
     grid-template-columns: 1fr;
 
     gap: 20px;
   }
 
   .card {
-    width: 100%;
-
-    border-radius: 9px;
+    width: 100% ;
+    max-width: 100% ;
   }
-
-  /* IMAGE */
 
   .card img {
-    width: 100%;
-
+    width: 100% ;
+    max-width: 100%;
     height: 210px;
-
     object-fit: cover;
+    display: block;
   }
-
-  /* CONTENT */
 
   .content {
     width: 100%;
-
     padding: 16px 15px 18px;
   }
-
-  .content h3 {
-    font-size: 19px;
-
-    line-height: 1.3;
-
-    margin-bottom: 7px;
-  }
-
-  .content span {
-    font-size: 18px;
-  }
 }
-
 /* =========================
    SMALL MOBILE
 ========================= */
