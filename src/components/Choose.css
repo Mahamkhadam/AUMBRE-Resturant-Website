@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.choose-container{
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px 8%;
+  position: relative;
+  display: flex;
+
+  
+  font-family: 'Arial', sans-serif;
+  background-color: #183522;
+  background-image: url('../assets/choose.png'); 
+  background-size: 100% auto;
+  background-position: center bottom -80%;
+  background-attachment: fixed; 
+  background-repeat: no-repeat;
+}
+.choose-overlay{
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0,.25); 
+  z-index: 1;
+  display: none;
+}
+.choose-wrapper{
+     max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.choose-header{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.choose-title{
+  font-size: 3rem;
+  font-weight: 700;
+  color: #d4a420;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-family:"Old English Text MT", Georgia, serif;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+.choose-subtitle{
+    max-width: 800px;
+  margin: 0 auto;
+  color: #d4d4d4;
+  font-size: 1rem;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+.choose-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 50px;
+    margin-top: 70px;
+}
+.choose-card{
+    text-align: center;
+    padding: 20px;
+    transition: .3s;
+}
+.choose-card:hover{
+    transform: translateY(-10px);
+}
+.choose-img{
+    display:flex;
+    justify-content:center;
+    margin-bottom:25px;
+}
+
+.choose-icon{
+    width:75px;
+    height:75px;
+    object-fit:contain;
+    transition:.3s;
+}
+
+.choose-card:hover .choose-icon{
+    transform:scale(1.1);
+}
+.choose-feature-title{
+    color:#d4a420;
+    font-size:36px;
+    font-family:"Old English Text MT", Georgia, serif;
+    font-weight:400;
+    margin:20px 0 15px;
+}
+.choose-feature-desc{
+    color:#d4a420;
+    font-size:17px;
+    line-height:1.8;
+    max-width:240px;
+    margin:auto;
+}
+@media(max-width:992px){
+    .choose-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+@media (max-width:992px){
+    .choose-grid{
+        grid-template-columns:repeat(2,1fr);
+        gap:40px;
+    }
+}
+
+@media (max-width:768px){
+    .choose-grid{
+        grid-template-columns:1fr;
+    }
+
+    .choose-container{
+        padding:70px 20px;
+    }
+
+    .choose-title{
+        font-size:2.3rem;
+    }
+
+    .choose-subtitle{
+        font-size:15px;
+    }
+}

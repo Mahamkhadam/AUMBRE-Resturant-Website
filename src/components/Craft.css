@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.craft-section {
+  width: 100%;
+  min-height: 500px;
+  background: #18472b;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 80px 20px;
+}
+
+.craft-content {
+  max-width: 850px;
+  text-align: center;
+}
+
+/* Heading */
+
+.craft-content h2 {
+  color: #d4a420;
+  font-family: "Old English Text MT", Georgia, serif;
+
+  font-size: 52px;
+  font-weight: normal;
+
+  margin-bottom: 35px;
+}
+
+/* Description */
+
+.craft-content p {
+  color: #aaa99c;
+
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 2.1;
+
+  margin-bottom: 40px;
+}
+
+/* Link */
+
+.craft-link {
+  color: #d4a420;
+
+  text-decoration: none;
+
+  font-family: Georgia, serif;
+  font-size: 17px;
+  letter-spacing: 1px;
+
+  transition: 0.3s ease;
+}
+
+.craft-link span {
+  margin-left: 5px;
+  transition: 0.3s ease;
+}
+
+.craft-link:hover {
+  color: #f0c33c;
+}
+
+.craft-link:hover span {
+  margin-left: 12px;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+  .craft-section {
+    min-height: 450px;
+    padding: 70px 30px;
+  }
+
+  .craft-content h2 {
+    font-size: 44px;
+  }
+
+  .craft-content p {
+    font-size: 16px;
+    line-height: 1.9;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .craft-section {
+    min-height: 400px;
+    padding: 60px 20px;
+  }
+
+  .craft-content h2 {
+    font-size: 36px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+  }
+
+  .craft-content p {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+  }
+
+  .craft-link {
+    font-size: 15px;
+  }
+}

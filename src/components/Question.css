@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.questions-section {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #0b2417;
+
+  padding: 70px 40px 100px;
+}
+
+.questions-container {
+  width: 100%;
+  max-width: 1080px;
+
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 70px;
+}
+
+/* FAQ ITEM */
+
+.question-item {
+  width: 100%;
+
+  border-bottom: 1px solid #30492c;
+
+  transition: 0.3s ease;
+}
+
+/* QUESTION BUTTON */
+
+.question-btn {
+  width: 100%;
+
+  min-height: 76px;
+
+  padding: 0;
+
+  background: transparent;
+
+  border: none;
+
+  color: #eee7d7;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  text-align: left;
+
+  font-family: Georgia, serif;
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+/* HOVER */
+
+.question-btn:hover {
+  color: #d4a420;
+}
+
+/* ARROW */
+
+.arrow {
+  color: #d4a420;
+
+  font-size: 27px;
+
+  font-family: Arial, sans-serif;
+
+  margin-left: 20px;
+
+  transition: 0.3s ease;
+}
+
+.question-item.open .arrow {
+  transform: rotate(0deg);
+}
+
+/* ANSWER */
+
+.answer {
+  padding: 0 35px 20px 0;
+
+  animation: faqOpen 0.3s ease;
+}
+
+.answer p {
+  color: #a9aa9c;
+
+  font-family: Georgia, serif;
+
+  font-size: 13px;
+
+  line-height: 1.8;
+}
+
+@keyframes faqOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* OPEN ITEM */
+
+.question-item.open {
+  border-color: #d4a420;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .questions-section {
+    padding: 60px 30px 80px;
+  }
+
+  .questions-container {
+    grid-template-columns: 1fr;
+
+    gap: 0;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+  .questions-section {
+    padding: 45px 20px 70px;
+  }
+
+  .question-btn {
+    min-height: 65px;
+
+    font-size: 15px;
+  }
+
+  .arrow {
+    font-size: 23px;
+  }
+
+  .answer {
+    padding-right: 15px;
+  }
+
+  .answer p {
+    font-size: 12px;
+  }
+}

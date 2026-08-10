@@ -1,0 +1,132 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.journey-section {
+  width: 100%;
+  background: #0d2818;
+  padding: 90px 70px;
+}
+
+/* Heading */
+
+.journey-content {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.journey-content h1 {
+  color: #d4a420;
+  font-family: "Old English Text MT", Georgia, serif;
+  font-size: 55px;
+  font-weight: normal;
+}
+
+/* Journey Box */
+
+.journey-box {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+/* Individual Item */
+
+.stat {
+  min-height: 220px;
+
+  background: #1d3b25;
+  border: 1px solid #816726;
+
+  padding: 35px 25px;
+
+  text-align: center;
+
+  transition: 0.4s ease;
+}
+
+.stat:hover {
+  transform: translateY(-8px);
+  border-color: #d4a420;
+}
+
+/* Year */
+
+.stat h2 {
+  color: #d4a420;
+
+  font-family: "Old English Text MT", Georgia, serif;
+
+  font-size: 45px;
+  font-weight: normal;
+
+  margin-bottom: 25px;
+}
+
+/* Description */
+
+.stat p {
+  color: #aaa99c;
+
+  font-family: Georgia, serif;
+
+  font-size: 16px;
+  line-height: 1.8;
+}
+
+/* Tablet */
+
+@media (max-width: 1000px) {
+
+  .journey-section {
+    padding: 70px 40px;
+  }
+
+  .journey-box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  .journey-content h1 {
+    font-size: 48px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+  .journey-section {
+    padding: 60px 20px;
+  }
+
+  .journey-content {
+    margin-bottom: 40px;
+  }
+
+  .journey-content h1 {
+    font-size: 38px;
+  }
+
+  .journey-box {
+    grid-template-columns: 1fr;
+  }
+
+  .stat {
+    min-height: auto;
+    padding: 30px 20px;
+  }
+
+  .stat h2 {
+    font-size: 40px;
+  }
+
+  .stat p {
+    font-size: 15px;
+  }
+}

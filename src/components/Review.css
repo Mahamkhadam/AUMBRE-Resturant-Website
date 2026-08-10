@@ -1,0 +1,86 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.review{
+    width:100%;
+    min-height:100vh;
+    background:#173a22;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:80px 20px;
+}
+
+.review-content{
+    max-width:850px;
+    width:100%;
+}
+
+.review h2{
+    color:#d4a420;
+    font-size:58px;
+    margin-bottom:60px;
+    font-family:"Old English Text MT", Georgia, serif;
+    font-weight:400;
+}
+
+.review-text{
+    color:#d8d8d8;
+    font-size:32px;
+    line-height:1.8;
+    font-style:italic;
+    margin-bottom:60px;
+    font-family:Georgia, serif;
+}
+
+.review-user{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.user-icon{
+    font-size:95px;
+    color:#d4a420;
+    margin-bottom:20px;
+}
+
+.review-user h3{
+    color:#ffffff;
+    font-size:32px;
+    margin-bottom:8px;
+    font-family:"Old English Text MT", Georgia, serif;
+    font-weight:400;
+}
+
+.review-user span{
+    color:#8e968d;
+    font-size:18px;
+}
+
+.review-dots{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    margin-top:45px;
+}
+
+.review-dots span{
+    width:14px;
+    height:14px;
+    border-radius:50%;
+    background:#6d6d30;
+    cursor:pointer;
+    transition:.3s;
+}
+.review-dots span:hover{
+    transform:scale(1.2);
+}
+
+.review-dots span.active{
+    background:#d4a420;
+}

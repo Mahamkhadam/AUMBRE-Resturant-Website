@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0e2416;
+}
+
+/* =========================
+   MAIN MENU SECTION
+========================= */
+
+.signature-menu {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0e2416;
+  padding: 40px 70px 90px;
+}
+
+/* =========================
+   CATEGORY BUTTONS
+========================= */
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 45px;
+  padding-top: 30px;
+  flex-wrap: wrap;
+}
+.category-btn {
+  background-color: #183522;
+  color: #aaa99c;
+  border: 1px solid #31502f;
+  border-radius: 30px;
+  padding: 12px 25px;
+  font-family: Georgia, serif;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.category-btn:hover {
+  color: #d4a420;
+  border-color: #d4a420;
+}
+
+.category-btn.active {
+  background-color: #d4a420;
+  color: #111;
+  border-color: #d4a420;
+}
+
+/* =========================
+   MENU GRID
+========================= */
+
+.menu-grid {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 28px;
+}
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card {
+  background-color: #1d3b25;
+  border: 1px solid #52652b;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-7px);
+  border-color: #d4a420;
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.menu-image {
+  width: 100%;
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+/* =========================
+   CHEF PICK
+========================= */
+
+.chef-pick {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  background-color: #d4a420;
+  color: #111;
+
+  padding: 8px 12px;
+
+  font-size: 11px;
+  font-family: Georgia, serif;
+  letter-spacing: 1px;
+}
+
+/* =========================
+   CARD CONTENT
+========================= */
+
+.menu-content {
+  padding: 18px 15px;
+}
+
+.menu-content h3 {
+  color: #f0eadc;
+
+  font-family: "Old English Text MT", Georgia, serif;
+
+  font-size: 20px;
+  font-weight: normal;
+
+  margin-bottom: 8px;
+}
+
+.menu-content p {
+  color: #999b8e;
+
+  font-family: Georgia, serif;
+
+  font-size: 12px;
+
+  margin-bottom: 15px;
+}
+
+.menu-price {
+  color: #d4a420;
+
+  font-family: Georgia, serif;
+
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+  .signature-menu {
+    padding: 40px;
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   SMALL TABLET
+========================= */
+
+@media (max-width: 800px) {
+
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .menu-image {
+    height: 210px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 550px) {
+
+  .signature-menu {
+    padding: 30px 20px 60px;
+  }
+
+  .menu-categories {
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .category-btn {
+    padding: 9px 15px;
+    font-size: 13px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-image {
+    height: 230px;
+  }
+}

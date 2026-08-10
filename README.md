@@ -1,0 +1,1 @@
+A modern and responsive restaurant website built using React.js and CSS. It includes a navigation bar, hero section, menu, master chefs, gallery, testimonials, blog, FAQ, contact section, table reservation, and footer with a clean, elegant, and user-friendly design.
