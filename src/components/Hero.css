@@ -28,22 +28,18 @@ HERO
 ========================= */
 .hero {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
   min-height: 100vh;
 
   position: relative;
+  overflow: hidden;
 
   display: flex;
   align-items: center;
 
   padding-top: 90px;
 
-  overflow: hidden;
-
   background: #0d2318;
 }
-
 /* =========================
 HERO ANIMATIONS
 ========================= */
@@ -51,7 +47,7 @@ HERO ANIMATIONS
   content: "";
 
   position: absolute;
-  inset: 0;
+  inset: -5%;
 
   background-image: url("/src/assets/hero-img.png");
   background-size: cover;
@@ -86,8 +82,7 @@ OVERLAY
   background: rgba(0, 0, 0, 0.55);
 
   z-index: 1;
-}
-/* =========================
+}/* =========================
 HERO CONTENT
 ========================= */
 
@@ -109,22 +104,44 @@ HERO CONTENT
 /* =========================
 HEADING ANIMATION
 ========================= */
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
 .hero-content h1 {
-  font-family: "UnifrakturCook", cursive;
-
-  color: #d4a420;
-
-  font-size: 90px;
-  line-height: 1.1;
-
-  margin-bottom: 35px;
-
   opacity: 0;
-
   animation: fadeLeft 1s ease 0.2s forwards;
 }
 
+.hero-content p {
+  opacity: 0;
+  animation: fadeUp 1s ease 0.5s forwards;
+}
+
+.hero-btn {
+  opacity: 0;
+  animation: fadeUp 1s ease 0.8s forwards;
+}
 /* =========================
 PARAGRAPH ANIMATION
 ========================= */
