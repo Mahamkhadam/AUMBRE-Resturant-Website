@@ -47,6 +47,47 @@ HERO
   padding-top: 90px;
 
   overflow: hidden;
+
+  /* Background animation */
+  animation: heroZoom 1.5s ease-out forwards;
+}
+
+/* =========================
+HERO ANIMATIONS
+========================= */
+
+@keyframes heroZoom {
+  from {
+    background-size: 108%;
+  }
+
+  to {
+    background-size: cover;
+  }
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(35px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* =========================
@@ -84,6 +125,10 @@ HERO CONTENT
   align-items: flex-start;
 }
 
+/* =========================
+HEADING ANIMATION
+========================= */
+
 .hero-content h1 {
   font-family: "UnifrakturCook", cursive;
 
@@ -93,7 +138,15 @@ HERO CONTENT
   line-height: 1.1;
 
   margin-bottom: 35px;
+
+  opacity: 0;
+
+  animation: fadeLeft 1s ease 0.2s forwards;
 }
+
+/* =========================
+PARAGRAPH ANIMATION
+========================= */
 
 .hero-content p {
   color: #ddd;
@@ -102,7 +155,15 @@ HERO CONTENT
   line-height: 1.8;
 
   margin-bottom: 30px;
+
+  opacity: 0;
+
+  animation: fadeUp 1s ease 0.6s forwards;
 }
+
+/* =========================
+BUTTON
+========================= */
 
 .hero-btn {
   margin-top: 25px;
@@ -120,11 +181,17 @@ HERO CONTENT
   cursor: pointer;
 
   transition: 0.3s ease;
+
+  opacity: 0;
+
+  animation: fadeUp 1s ease 0.9s forwards;
 }
 
 .hero-btn:hover {
   background: #d4a420;
   color: black;
+
+  transform: translateY(-3px);
 }
 
 /* =========================
@@ -186,6 +253,8 @@ MOBILE
 
     display: flex;
     align-items: center;
+
+    animation: none;
   }
 
   .overlay {
@@ -214,6 +283,8 @@ MOBILE
     line-height: 1.1;
 
     margin-bottom: 20px;
+
+    animation: fadeLeft 0.9s ease 0.2s forwards;
   }
 
   .hero-content p {
@@ -225,6 +296,8 @@ MOBILE
     line-height: 1.6;
 
     margin-bottom: 15px;
+
+    animation: fadeUp 0.9s ease 0.5s forwards;
   }
 
   .hero-btn {
@@ -233,6 +306,8 @@ MOBILE
     padding: 13px 28px;
 
     font-size: 15px;
+
+    animation: fadeUp 0.9s ease 0.8s forwards;
   }
 }
 
@@ -335,5 +410,21 @@ VERY SMALL MOBILE
     padding: 10px 20px;
 
     font-size: 13px;
+  }
+}
+
+/* =========================
+REDUCED MOTION
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero,
+  .hero-content h1,
+  .hero-content p,
+  .hero-btn {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
