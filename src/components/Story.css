@@ -129,32 +129,26 @@ body,
   .story {
     width: 100%;
     min-height: auto;
-
     display: flex;
     flex-direction: column;
-
     padding: 45px 15px;
     gap: 25px;
-
     overflow: hidden;
   }
 
   .story-img {
     width: 100%;
     max-width: 100%;
-
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   .story-img img {
-    width: 100% !important;
-    height: auto !important;
-
-    max-width: 350px !important;
-
-    object-fit: cover!important;
+    width: 180px ;
+    height: auto;
+    max-width: 75% ;
+    object-fit: contain;
     margin: 0 auto;
     display: block;
   }
@@ -162,9 +156,7 @@ body,
   .story-content {
     width: 100%;
     max-width: 340px;
-
     margin: 0 auto;
-
     text-align: center;
   }
 
