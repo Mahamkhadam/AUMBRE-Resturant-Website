@@ -16,86 +16,242 @@ body,
 }
 
 /* =========================
-   STORY (PC / DESKTOP FIRST)
+   STORY SECTION (PC / DESKTOP)
 ========================= */
-.story {
+.story-section {
   width: 100%;
-  max-width: 100%;
-  min-width: 0;
-  min-height: 100vh;
-  background: #0d2318;
+  background-color: #0d2318;
 
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 
-  gap: 60px;
-  padding: 80px 5%;
+  gap: 50px;
+  padding: 100px 5%; /* Full vertical height ki jagah balanced top/bottom padding */
 }
 
 /* =========================
-   IMAGE (PC)
+   STORY IMAGE (PC)
 ========================= */
-.story-img {
-  flex: 1 1 500px;
-  max-width: 550px;
+.story-image {
+  flex: 1 1 55%; /* Image ko content se zyada area diya */
+  max-width: 650px;
   width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
-.story-img img {
+.story-image img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
-  /* Image ko cut hone se bachane ke liye contain use kiya hai */
-  object-fit: contain;
+  height: 420px; /* Specific height for PC to make it look large */
+  object-fit: cover; /* Cover lagane se container poora fill hoga */
+  border-radius: 8px;
   display: block;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
 }
 
 /* =========================
-   CONTENT (PC)
+   STORY CONTENT (PC)
 ========================= */
 .story-content {
-  flex: 1 1 450px;
+  flex: 1 1 45%;
   max-width: 500px;
   width: 100%;
+  text-align: left;
 }
 
 .story-content h2 {
   color: #d4a420;
-  font-size: clamp(36px, 4vw, 56px); /* Auto adjust for screen size */
-  margin-bottom: 24px;
+  font-size: 56px;
+  margin-bottom: 20px;
   font-family: "Old English Text MT", Georgia, serif;
 }
 
 .story-content p {
-  color: #9b9b9b;
+  color: #a0a0a0;
   font-size: 18px;
   line-height: 1.8;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
-.story-content a {
+/* Read More Button */
+.read-more {
+  background: transparent;
+  border: none;
   color: #d4a420;
   font-size: 18px;
-  line-height: 1.8;
-  text-decoration: none;
-  transition: color 0.3s ease;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
 }
 
-.story-content a:hover {
+.read-more:hover {
   color: #ffffff;
+  transform: translateX(5px);
 }
 
 /* =========================
    TABLET (max-width: 1024px)
 ========================= */
 @media (max-width: 1024px) {
-  .story {
+  .story-section {
+    gap: 30px;
+    padding: 70px 4%;
+  }
+
+  .story-image img {
+    height: 350px;
+  }
+
+  .story-content h2 {
+    font-size: 44px;
+  }
+}
+
+/* =========================
+   MOBILE (max-width: 768px)
+========================= */
+@media (max-width: 768px) {
+  .story-section {
+    flex-direction: column;
+    padding: 50px 20px;
+    gap: 30px;
+  }
+
+  .story-image {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .story-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: contain; /* Mobile par poori image fit hogi bina cut hue */
+  }
+
+  .story-content {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .story-content h2 {
+    font-size: 36px;
+    margin-bottom: 15px;
+  }
+
+  .story-content p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+}* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* =========================
+   STORY SECTION (PC / DESKTOP)
+========================= */
+.story-section {
+  width: 100%;
+  /* min-height 100vh hata kar padding balance kar di taake layout stretch/compact na lage */
+  padding: 100px 8%; 
+  background-color: #0d2318;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  gap: 80px; /* Image aur Text ke beech space */
+}
+
+/* =========================
+   STORY IMAGE (PC)
+========================= */
+.story-image {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto; /* Image apni natural size me bari dikhegi */
+  max-width: 650px; /* Full size PC display */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* =========================
+   STORY CONTENT (PC)
+========================= */
+.story-content {
+  flex: 1;
+  width: 100%;
+  text-align: left;
+}
+
+.story-content h2 {
+  color: #d4a420;
+  font-size: 56px;
+  margin-bottom: 25px;
+  font-family: "Old English Text MT", Georgia, serif;
+}
+
+.story-content p {
+  color: #a0a0a0;
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Read More Button Styling */
+.read-more {
+  background: transparent;
+  border: none;
+  color: #d4a420;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.read-more:hover {
+  color: #ffffff;
+  transform: translateX(5px);
+}
+
+/* =========================
+   TABLET (max-width: 1024px)
+========================= */
+@media (max-width: 1024px) {
+  .story-section {
     gap: 40px;
-    padding: 60px 30px;
+    padding: 70px 5%;
+  }
+
+  .story-content h2 {
+    font-size: 42px;
   }
 
   .story-content p {
@@ -107,58 +263,35 @@ body,
    MOBILE (max-width: 768px)
 ========================= */
 @media (max-width: 768px) {
-  .story {
+  .story-section {
     flex-direction: column;
     padding: 50px 20px;
     gap: 30px;
-    min-height: auto;
   }
 
-  .story-img {
-    flex: none;
+  .story-image {
     width: 100%;
-    max-width: 320px; /* Mobile par clean sizing */
-    margin: 0 auto;
   }
 
-  .story-img img {
+  .story-image img {
     width: 100%;
     height: auto;
-    object-fit: contain; /* Bild bilkul cut nahi hogi */
+    max-height: 350px;
+    object-fit: contain; /* Mobile par bilkul picture cut nahi hogi */
   }
 
   .story-content {
-    flex: none;
     width: 100%;
-    max-width: 100%;
     text-align: center;
   }
 
   .story-content h2 {
-    font-size: 32px;
-    margin-bottom: 16px;
+    font-size: 36px;
+    margin-bottom: 15px;
   }
 
   .story-content p {
     font-size: 15px;
     line-height: 1.6;
-    margin-bottom: 20px;
-  }
-}
-
-/* =========================
-   SMALL MOBILE (max-width: 480px)
-========================= */
-@media (max-width: 480px) {
-  .story {
-    padding: 40px 15px;
-  }
-
-  .story-img {
-    max-width: 250px; /* Chotay screen ke liye scaled size */
-  }
-
-  .story-content h2 {
-    font-size: 28px;
   }
 }
