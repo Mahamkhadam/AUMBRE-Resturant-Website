@@ -1,4 +1,4 @@
-import Feast from "../components/Feast";
+import Feast from "../sections/Feast";
 import PageBanner from "../components/PageBanner";
 function Gallery()
 {

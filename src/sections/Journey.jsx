@@ -1,24 +1,8 @@
 import "./Journey.css";
 
+import { journeyData as data } from "../data";
+
 function Journey() {
-  const data = [
-    {
-      number: "2004",
-      title: "Opened as a small family kitchen with six tables.",
-    },
-    {
-      number: "2011",
-      title: "Expanded the dining room, added our signature wood-fire grill.",
-    },
-    {
-      number: "2017",
-      title: "Named one of the city's top dining spots for three years running.",
-    },
-    {
-      number: "2024",
-      title: "Two decades in, still family-run, still slow-cooked.",
-    },
-  ];
 
   return (
     <section className="journey-section">

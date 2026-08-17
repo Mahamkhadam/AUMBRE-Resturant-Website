@@ -1,34 +1,9 @@
 import React from "react";
 import "./Offermenu.css";
-import chicken from "../assets/Grilled-chicken.png";
-import pasta from "../assets/main3.png";
-import burger from "../assets/Starter.png";
+
+import { offerItems } from "../data";
 
 const Offermenu = () => {
-  const Offeritems = [
-    {
-      id: 1,
-      title: "GRILLED CHICKEN",
-      image: chicken,
-      description:
-        "Juicy grilled chicken served with fresh vegetables and our signature sauce.",
-    },
-    {
-      id: 2,
-      title: "TRUFFLE PASTA",
-      image: pasta,
-      description:
-        "Creamy pasta tossed with mushrooms, parmesan cheese, and truffle oil.",
-    },
-    {
-      id: 3,
-      title: "CLASSIC BURGER",
-      image: burger,
-      description:
-        "Fresh beef patty with lettuce, tomato, cheese, and crispy fries.",
-    },
-  ];
-
   return (
     <section className="offer-container">
       <div className="offer-header">
@@ -37,7 +12,7 @@ const Offermenu = () => {
       </div>
 
       <div className="offer-grid">
-        {Offeritems.map((item) => (
+        {offerItems.map((item) => (
           <div className="offer-card" key={item.id}>
             <img
               src={item.image}

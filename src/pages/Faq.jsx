@@ -1,5 +1,5 @@
 import PageBanner from "../components/PageBanner";
-import Questions from "../components/Question";
+import Questions from "../sections/Question";
 function Faq()
 {
     return( <>

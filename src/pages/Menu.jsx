@@ -1,5 +1,5 @@
 import PageBanner from "../components/PageBanner";
-import Signature from "../components/Signature";
+import Signature from "../sections/Signature";
 function Menu()
 {
     return( 

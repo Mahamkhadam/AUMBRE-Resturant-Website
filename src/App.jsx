@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 
 import Home from "./pages/Home";
-import About from "./pages/About";
+import About from "./pages/about/About";
 import Blogs from "./pages/Blogs";
 import Chefs from "./pages/Chefs";
 import Contact from "./pages/Contact";

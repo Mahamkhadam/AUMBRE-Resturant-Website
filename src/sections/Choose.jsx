@@ -1,45 +1,11 @@
 import React, { useState } from "react";
 import "./Choose.css";
 
-import taste from "../assets/Taste.png";
-import chefs from "../assets/Chef.png";
-import delivery from "../assets/Delivery.png";
-import discount from "../assets/Discount.png";
+import { chooseFeatures } from "../data";
 
 const Choose = () => {
 
   const [activeCard, setActiveCard] = useState(null);
-
-  const features = [
-    {
-      id: 1,
-      img: taste,
-      title: "TASTE MATTERS",
-      description:
-        "Use this space to promote the business, its dishes or its services.",
-    },
-    {
-      id: 2,
-      img: chefs,
-      title: "THE BEST CHEFS",
-      description:
-        "Use this space to promote the business, its dishes or its services.",
-    },
-    {
-      id: 3,
-      img: discount,
-      title: "DISCOUNTS",
-      description:
-        "Use this space to promote the business, its dishes or its services.",
-    },
-    {
-      id: 4,
-      img: delivery,
-      title: "EXPRESS DELIVERY",
-      description:
-        "Use this space to promote the business, its dishes or its services.",
-    },
-  ];
 
   // Card click function
   const handleCardClick = (id) => {
@@ -73,7 +39,7 @@ const Choose = () => {
         {/* Features Grid */}
         <div className="choose-grid">
 
-          {features.map((feature) => (
+          {chooseFeatures.map((feature) => (
 
             <div
               className={`choose-card ${

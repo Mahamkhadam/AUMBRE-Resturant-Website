@@ -1,4 +1,4 @@
-import Journal from "../components/Journal";
+import Journal from "../sections/Journal";
 import PageBanner from "../components/PageBanner";
 function Blogs() {
   return(

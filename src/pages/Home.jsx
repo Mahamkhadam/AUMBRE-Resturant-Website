@@ -1,9 +1,9 @@
-import Hero from "../components/Hero";
-import Story from "../components/Story";
-import Offermenu from "../components/Offermenu";
-import Choose from "../components/Choose";
-import Popular from "../components/Popular";
-import Review from "../components/Review";
+import Hero from "../sections/Hero";
+import Story from "../sections/Story";
+import Offermenu from "../sections/Offermenu";
+import Choose from "../sections/Choose";
+import Popular from "../sections/Popular";
+import Review from "../sections/Review";
 
 
 function Home() {
