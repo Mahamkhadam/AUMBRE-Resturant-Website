@@ -37,7 +37,7 @@ const Popular = () => {
 
         <h2>Popular Categories</h2>
 
-        {categories.map((item) => (
+        {popularCategories.map((item) => (
           <button
             key={item}
             className={active === item ? "active" : ""}

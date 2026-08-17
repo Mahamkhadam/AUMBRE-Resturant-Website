@@ -23,7 +23,7 @@ function Signature() {
 
       <div className="menu-categories">
 
-        {categories.map((category) => (
+        {menuCategories.map((category) => (
 
           <button
             key={category}

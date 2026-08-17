@@ -20,6 +20,7 @@ import wing from "../assets/Starter1.png";
 
 import chicken from "../assets/Grilled-chicken.png";
 import bbq from "../assets/main3.png";
+import burger from "../assets/main3.png";
 import pasta from "../assets/main2.png";
 import rice from "../assets/main1.png";
 
