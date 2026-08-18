@@ -1,5 +1,5 @@
 import "./Tablebooking.css";
-import foodImage from "../assets/interior.png";
+import foodImage from "../../assets/interior.png";
 import { useState } from "react";
 
 function TableBooking() {

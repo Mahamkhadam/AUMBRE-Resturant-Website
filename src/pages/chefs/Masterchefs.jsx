@@ -2,7 +2,7 @@ import React from "react";
 import "./Masterchefs.css";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
-import { chefs } from "../data";
+import { chefs } from "../../data";
 
 const Masterchefs = () =>{
     return (

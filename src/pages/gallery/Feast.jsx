@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Feast.css";
 
-import { feastCategories, feastItems } from "../data";
+import { feastCategories, feastItems } from "../../data";
 
 function Feast() {
   const [activeCategory, setActiveCategory] = useState("All");

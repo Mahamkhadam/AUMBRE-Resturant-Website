@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Question.css";
 
-import { faqData } from "../data";
+import { faqData } from "../../data";
 
 function Questions() {
   const [openIndex, setOpenIndex] = useState(null);

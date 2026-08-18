@@ -1,5 +1,5 @@
-import Journal from "../sections/Journal";
-import PageBanner from "../components/PageBanner";
+import Journal from "./Journal";
+import PageBanner from "../../components/PageBanner";
 function Blogs() {
   return(
    <>

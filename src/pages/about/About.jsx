@@ -1,7 +1,7 @@
 import PageBanner from "../../components/PageBanner";
-import Legacy from "../../sections/Legacy";
-import Craft from "../../sections/Craft";
-import Journey from "../../sections/Journey";
+import Legacy from "./Legacy";
+import Craft from "./Craft";
+import Journey from "./Journey";
 function About() {
   return(
    <>

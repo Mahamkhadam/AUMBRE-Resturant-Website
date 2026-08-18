@@ -1,5 +1,5 @@
 import "./Story.css";
-import StoryImg from "../assets/preview.png";
+import StoryImg from "../../assets/preview.png";
 import { useState } from "react";
 
 function Story() {

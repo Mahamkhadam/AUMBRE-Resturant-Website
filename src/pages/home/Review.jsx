@@ -3,7 +3,7 @@ import {useState} from "react";
 import "./Review.css";
 import { FaUserCircle } from "react-icons/fa";
 
-import { reviews } from "../data";
+import { reviews } from "../../data";
 
 function Review()
 {

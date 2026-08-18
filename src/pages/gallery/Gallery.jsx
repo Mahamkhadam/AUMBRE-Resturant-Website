@@ -1,5 +1,5 @@
-import Feast from "../sections/Feast";
-import PageBanner from "../components/PageBanner";
+import Feast from "./Feast";
+import PageBanner from "../../components/PageBanner";
 function Gallery()
 {
 return( 

@@ -1,16 +1,16 @@
 import Navbar from "./components/Navbar";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./pages/Home";
+import Home from "./pages/home/Home";
 import About from "./pages/about/About";
-import Blogs from "./pages/Blogs";
-import Chefs from "./pages/Chefs";
-import Contact from "./pages/Contact";
-import Faq from "./pages/Faq";
-import Gallery from "./pages/Gallery";
-import Menu from "./pages/Menu";
-import Testimonials from "./pages/Testimonials";
-import Reserve from "./pages/Reserve";
+import Blogs from "./pages/blogs/Blogs";
+import Chefs from "./pages/chefs/Chefs";
+import Contact from "./pages/contact/Contact";
+import Faq from "./pages/faq/Faq";
+import Gallery from "./pages/gallery/Gallery";
+import Menu from "./pages/menu/Menu";
+import Testimonials from "./pages/testimonials/Testimonials";
+import Reserve from "./pages/reserve/Reserve";
 import Footer from "./components/Footer";
 
 function App() {

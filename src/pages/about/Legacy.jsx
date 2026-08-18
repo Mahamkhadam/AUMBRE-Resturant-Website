@@ -1,5 +1,5 @@
 import "./Legacy.css";
-import img from "../assets/preview.png";
+import img from "../../assets/preview.png";
 import { Link } from "react-router-dom";
 
 function Legacy()

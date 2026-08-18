@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./Choose.css";
 
-import { chooseFeatures } from "../data";
+import { chooseFeatures } from "../../data";
 
 const Choose = () => {
 

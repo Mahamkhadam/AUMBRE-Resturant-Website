@@ -1,4 +1,4 @@
-import TableBooking from "../sections/Tablebooking";
+import TableBooking from "./Tablebooking";
 
 function Reserve()
 {

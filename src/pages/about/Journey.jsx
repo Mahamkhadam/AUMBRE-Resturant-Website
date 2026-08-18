@@ -1,6 +1,6 @@
 import "./Journey.css";
 
-import { journeyData as data } from "../data";
+import { journeyData as data } from "../../data";
 
 function Journey() {
 

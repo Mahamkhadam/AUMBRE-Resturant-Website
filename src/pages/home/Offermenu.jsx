@@ -1,7 +1,7 @@
 import React from "react";
 import "./Offermenu.css";
 
-import { offerItems } from "../data";
+import { offerItems } from "../../data";
 
 const Offermenu = () => {
   return (

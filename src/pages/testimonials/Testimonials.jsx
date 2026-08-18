@@ -1,5 +1,5 @@
-import PageBanner from "../components/PageBanner";
-import Stats from "../sections/Stats";
+import PageBanner from "../../components/PageBanner";
+import Stats from "./Stats";
 function Testimonials()
 {
    return( <>

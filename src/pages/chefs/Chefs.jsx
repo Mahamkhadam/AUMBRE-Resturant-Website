@@ -1,5 +1,5 @@
-import PageBanner from "../components/PageBanner";
-import Masterchefs from "../sections/Masterchefs";
+import PageBanner from "../../components/PageBanner";
+import Masterchefs from "./Masterchefs";
 
 function Chefs(){
     return( 

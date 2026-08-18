@@ -2,7 +2,7 @@ import { useState } from "react";
 import { FaUserCircle } from "react-icons/fa";
 import "./Stats.css";
 
-import { testimonials as reviews, statsData as data } from "../data";
+import { testimonials as reviews, statsData as data } from "../../data";
 
 function Stats()
 {

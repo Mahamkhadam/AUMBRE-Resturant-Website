@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./Signature.css";
 
-import { menuCategories, menuItems } from "../data";
+import { menuCategories, menuItems } from "../../data";
 
 
 function Signature() {

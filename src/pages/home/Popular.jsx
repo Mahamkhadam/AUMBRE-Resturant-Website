@@ -7,7 +7,7 @@ import {
   desserts,
   starters,
   mainCourse,
-} from "../data";
+} from "../../data";
 const Popular = () => {
 
   const [active, setActive] = useState("Beverages");

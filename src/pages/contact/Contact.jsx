@@ -1,5 +1,5 @@
-import PageBanner from "../components/PageBanner";
-import GetInTouch from "../sections/GetInTouch";
+import PageBanner from "../../components/PageBanner";
+import GetInTouch from "./GetInTouch";
 function Contact()
 {
     return( <>

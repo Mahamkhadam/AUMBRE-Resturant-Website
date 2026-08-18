@@ -1,6 +1,6 @@
 import "./Journal.css";
 
-import { posts } from "../data";
+import { posts } from "../../data";
 
 function Journal() {
 
